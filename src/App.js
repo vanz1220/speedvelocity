@@ -1,16 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import SpeedVelocity from './SpeedVelocity'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Speed Velocity
-        </p>
-      </header>
-      <SecondsTimePicker/>
+      <SpeedVelocity/>
     </div>
   );
 }
