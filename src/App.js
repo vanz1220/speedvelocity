@@ -2,7 +2,6 @@ import './App.css';
 import InputField from './inputfield'
 import InputTextField from './inputtextfield';
 import React, { Component, useRef } from 'react'
-import { isTime } from 'react-time-picker/dist/shared/propTypes';
 
 function App() {
   const nameForm = useRef(null)
