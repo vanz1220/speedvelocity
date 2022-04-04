@@ -26,6 +26,7 @@ function App() {
     const totalTime = timetotalHour + timetotalMin + timetotalSec
     const velocity = parseFloat(distanceMeter / totalTime).toFixed(4)
      alert(`${velocity}`)
+
   };
 
   return (
@@ -37,6 +38,7 @@ function App() {
         <InputField label={'Arrival Time: '} name={'time2'}/><br/>
       </form>
       <button onClick={timer1}>Compute Time</button>
+      
     </div>
   );
 }
