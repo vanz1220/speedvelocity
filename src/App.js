@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useRef, useState } from 'react'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDove } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const nameForm = useRef(null)
@@ -35,7 +36,8 @@ function App() {
     
 
     <div className='App'>
-      <h1>Speed Velocity</h1><br/>
+        
+      <h1><FontAwesomeIcon icon={faDove} size="2x"/> Speed Velocity</h1><br/>
       <form ref={nameForm}>
 
       <label>{'Release Time: '}</label>
