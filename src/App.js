@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useRef, useState } from 'react'
 
+
 function App() {
   const nameForm = useRef(null)
   
@@ -16,11 +17,9 @@ function App() {
     const time2Seconds = new Date(form['time2'].value).getSeconds()
     const distanceMeter = form['dist1'].value
 
-    const time1TotalHourMin = parseFloat(time1Hours * 60)
-    const time2TotalHourMin = parseFloat(time2Hours * 60)
-    const timetotalHour = time2TotalHourMin - time1TotalHourMin
+    const timetotalHour = parseFloat(time2Hours * 60).toFixed(5) - parseFloat(time1Hours * 60).toFixed(5)
     const timetotalMin = time2Minutes - time1Minutes
-    const timetotalSec = (time2Seconds - time1Seconds) / 60
+    const timetotalSec = parseFloat((time2Seconds - time1Seconds)) / 60
 
     const totalTime = timetotalHour + timetotalMin + timetotalSec
     const velocity = parseFloat(distanceMeter / totalTime).toFixed(4)
@@ -33,6 +32,8 @@ function App() {
   const [stated1, setStated1] = useState('')
 
   return (
+    
+
     <div className='App'>
       <h1>Speed Velocity</h1><br/>
       <form ref={nameForm}>
