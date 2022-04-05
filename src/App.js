@@ -1,10 +1,9 @@
 import './App.css';
-import InputField from './inputfield'
-import InputTextField from './inputtextfield';
-import React, { Component, useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 function App() {
   const nameForm = useRef(null)
+  
 
   const timer1 = ()=>{
     // show the user input value to console
@@ -25,18 +24,29 @@ function App() {
 
     const totalTime = timetotalHour + timetotalMin + timetotalSec
     const velocity = parseFloat(distanceMeter / totalTime).toFixed(4)
-     alert(`${velocity}`)
+     alert(`Your Speed is ${velocity} mpm`)
 
   };
+
+  const [statet1, setStatet1] = useState('')
+  const [statet2, setStatet2] = useState('')
+  const [stated1, setStated1] = useState('')
 
   return (
     <div className='App'>
       <h1>Speed Velocity</h1><br/>
       <form ref={nameForm}>
-        <InputTextField label={'Distance In Meters: '} name={'dist1'}/><br/>
-        <InputField label={'Release Time: '} name={'time1'}/><br/>
-        <InputField label={'Arrival Time: '} name={'time2'}/><br/>
+
+      <label>{'Release Time: '}</label>
+      <input type="datetime-local" value={statet1} name={'time1'} onChange={(e) => setStatet1(e.target.value)} step="2"/><br/>
+      <label>{'Arrival Time: '}</label>
+      <input type="datetime-local" value={statet2} name={'time2'} onChange={(e) => setStatet2(e.target.value)} step="2"/><br/>
+
+      <label>{'Distance In Meters: '}</label>
+      <input type="number" value={stated1} name={'dist1'} onChange={(e) => setStated1(e.target.value)} float={true}/><br/>
+
       </form>
+      <br/>
       <button onClick={timer1}>Compute Time</button>
       
     </div>
