@@ -50,7 +50,7 @@ function App() {
 
       </form>
       <br/>
-      <button onClick={timer1}>Compute Time</button>
+      <button onClick={timer1}>Compute Speed</button>
       
     </div>
   );
