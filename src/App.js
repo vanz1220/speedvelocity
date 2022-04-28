@@ -41,9 +41,9 @@ function App() {
       <form ref={nameForm}>
 
       <label>{'Release Time: '}</label>
-      <input type="datetime-local" value={statet1} name={'time1'} onChange={(e) => setStatet1(e.target.value)} step="2"/><br/>
+      <input type="datetime-local" value={statet1} name={'time1'} onChange={(e) => setStatet1(e.target.value)} step="1"/><br/>
       <label>{'Arrival Time: '}</label>
-      <input type="datetime-local" value={statet2} name={'time2'} onChange={(e) => setStatet2(e.target.value)} step="2"/><br/>
+      <input type="datetime-local" value={statet2} name={'time2'} onChange={(e) => setStatet2(e.target.value)} step="1"/><br/>
 
       <label>{'Distance In Meters: '}</label>
       <input type="number" value={stated1} name={'dist1'} onChange={(e) => setStated1(e.target.value)} float={true}/><br/>
