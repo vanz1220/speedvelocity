@@ -39,7 +39,10 @@ function App() {
         
       <h1><FontAwesomeIcon icon={faDove} size="2x"/> Speed Velocity</h1><br/>
       <form ref={nameForm}>
-
+      <Datepicker
+          controls={['time']}
+          timeFormat="HH:mm:ss"
+      />
       <label>{'Release Time: '}</label>
       <input type="datetime-local" value={statet1} name={'time1'} onChange={(e) => setStatet1(e.target.value)} step="1"/><br/>
       <label>{'Arrival Time: '}</label>
